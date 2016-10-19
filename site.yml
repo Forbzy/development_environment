@@ -20,3 +20,4 @@
     - { role: toolbox }
     - { role: virtualbox }
     - { role: clamav }
+    - { role: achaussier.openjdk-jdk }

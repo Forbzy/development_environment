@@ -27,7 +27,7 @@
   version: v1.0.2
   name: grub-cmdline
 
-- src: https://github.com/KEAOSolutions/ansible-role-clamav.git
+- src: https://github.com/Forbzy/ansible-role-clamav.git
   version: v0.1.4
   name: clamav
 

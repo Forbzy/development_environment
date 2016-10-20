@@ -18,7 +18,7 @@ fi
 
 pip install --upgrade pip setuptools ansible
 
-apt install openjdk-8-jdk -y
+apt install openjdk-8-jdk openssh-server -y
 
 mkdir -p /opt/GIT
 cd /opt/GIT

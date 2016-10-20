@@ -41,4 +41,14 @@ ansible-galaxy install -r requirements.yml
 
 ansible-playbook -i hostfile -v site.yml
 
+swapoff /dev/vg-workstation/swap
+lvremove /dev/vg-workstation/swap
+lvcreate -L 4G -n swap vg-workstation
+dd if=/dev/zero of=/dev/vg-workstation/swap bs=1M count=4096
+mkswap /dev/vg-workstation/swap
+swapon /dev/vg-workstation/swap
+lvextend -L +50G /dev/vg-workstation/home
+lvextend -L +5G /dev/vg-workstation/var_log
+
+
 exit
